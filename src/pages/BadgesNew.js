@@ -1,12 +1,14 @@
 import React from "react";
+import md5 from "md5";
 
-import "./styles/BadgeNew.css";
-import header from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 import PageLoading from "../components/PageLoading";
-
 import api from "../api";
+
+import "./styles/BadgeNew.css";
+import header from "../images/platziconf-logo.svg";
+
 class BadgeNew extends React.Component {
   state = {
     loading: false,
@@ -21,13 +23,17 @@ class BadgeNew extends React.Component {
     }
   };
 
-  handleChange = e => {
-    this.setState({
-      form: {
-        ...this.state.form,
-        [e.target.name]: e.target.value
-      }
-    });
+  handleChange = ({ target: { name, value } }) => {
+    let obj = { form: { ...this.state.form, [name]: value } };
+    if (name === "email") {
+      obj = {
+        form: {
+          ...obj.form,
+          avatarUrl: `https://www.gravatar.com/avatar/${md5(value)}?d=identicon`
+        }
+      };
+    }
+    this.setState(obj);
   };
 
   handleSubmit = async e => {

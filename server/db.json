@@ -28,13 +28,22 @@
       "avatarUrl": "https://www.gravatar.com/avatar/c2d679f9b44e1869548ab95aac18b7c9?d=identicon"
     },
     {
-      "id": "8dCSKNm",
+      "id": "uDZ5lND",
       "firstName": "Cesar",
-      "lastName": "Armas",
+      "lastName": "Armados",
+      "email": "juancarlospaez.2803@gmail.com",
+      "jobTitle": "FullStack",
+      "twitter": "odf",
+      "avatarUrl": "https://www.gravatar.com/avatar/b9aa5b42b8adb72c1266160c680bd997?d=identicon"
+    },
+    {
+      "firstName": "kk",
+      "lastName": "dsd",
       "email": "elynleon20@gmail.com",
       "jobTitle": "kk",
-      "twitter": "caal2096",
-      "avatarUrl": "https://www.gravatar.com/avatar/"
+      "twitter": "jkj",
+      "avatarUrl": "https://www.gravatar.com/avatar/4765951b8a0c9f345947a17b19354b29?d=identicon",
+      "id": "sBxMiL1"
     }
   ]
 }
