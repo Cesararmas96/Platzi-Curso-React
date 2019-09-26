@@ -1,5 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
+const TersetJSPlugin = require("terser-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -7,6 +9,11 @@ module.exports = {
     //es decir, las dependencias core
     modules: ["react", "react-dom", "react-router-dom"]
   },
+
+  optimization: {
+    minimizer: [new TersetJSPlugin(), new OptimizeCSSAssetsPlugin()]
+  },
+
   mode: "production",
   output: {
     path: path.resolve(__dirname, "dist"),
